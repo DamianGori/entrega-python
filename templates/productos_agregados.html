@@ -1,0 +1,17 @@
+<table>
+    <th>Producto</th>
+    <th>Precio</th>
+    <th>vencimiento</th>
+
+    {% for productos in productos_mostrar %}
+    <tr>
+        <td>{{ productos.nombre_producto }}</td>
+        <td>${{ productos.precio_producto }}</td>
+        <td>{{ productos.vencimiento_producto }}</td>
+        <td><a href="{% url 'eliminar' productos.id %}">Eliminar</a></td>
+        <td><a href="{% url 'EditarView' productos.id %}">Editar</a></td>
+    </tr>
+    {% endfor %}
+    <td><a href="{% url 'detalle' %}">Mostrar detalles</a></td>
+</table>
+

@@ -1,0 +1,13 @@
+<h2>Editar perfil</h2>
+
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
+                {{ miformulario.as_table }}
+            </table>
+            <br>
+            <table>
+                <button type="submit">Aceptar</button>
+            </table>
+        </form>
